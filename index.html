@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/de676a80bf.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/diseño.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightbox.css">  
+    
+    
+    <title>Vivero Yaxché</title>
+
+</head>
+<body>
+
+   <!-----Header - Menu----->
+    <header>
+        <div class="header-content">
+            
+            <div class="logoI">
+                <h1>Vivero <b>Yaxché</b></h1>
+            </div>
+            
+            <div class="menu" id="show-menu">
+                <nav>
+                    <ul>
+                        <li><a class = "desplazar" href="#article-inicio">Inicio</a></li>
+                        <li><a class = "desplazar" href="#">Servicios</a></li>
+                        <li><a class = "desplazar" href="#titulo-ubi">Ubicación</a></li>
+                        <li><a class = "desplazar" href="#titulo-contacto">Contacto</a></li>
+                        <li><a class = "" href="consejos.html">Consejos de jardineria</a></li>
+                        <li><a class = "desplazar" href="#titulo-galeria">Galeria</a></li>
+                        <li><a class = "desplazar" href="#">Testimonios</a></li>
+                        <li><a class = "desplazar" href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </nav>    
+            </div>
+        </div>
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-----Portada----->
+    <div class="container-cover">
+        <div class="container-info-cover">
+            <h1>¡Tu Rincón Verde en la Ciudad!</h1>
+            <p class="p1">Descubrí plantas vibrantes y creá tu propio refugio de serenidad en 
+                medio del ajetreo.</p>
+            <p class="p2">Vivero Yaxché, un escape natural en la urbanidad.</p>
+
+        </div>
+    </div>
+<div class="all">
+    <!-----Inicio----->
+    <div class="container-content">
+    
+        <article id="article-inicio">
+            <h1>Inicio</h1>
+            <p>Aníbal Colman te da la bienvenida a Vivero Yaxché, descubrí la pasión por las plantas y la jardinería mientras exploras un rincón 
+                lleno de vida y color. Aquí, cada planta cuenta una historia única, y es un encanto compartirlas contigo.
+                
+                Además de ofrecer un escape natural, te invita a explorar una variedad de productos. Desde hortalizas frescas hasta plantines 
+                vibrantes, licores aromáticos y macetas únicas, encontrarás todo lo que necesitas para dar vida a tu hogar y jardín.
+                La atención personalizada garantiza que encuentres las plantas y productos perfectos para tus necesidades. </p>
+        </article>
+    </div>
+    <div class="container-imgs-inicio">
+        <img src="Images/Inicio1.jpg" alt="" class="imagen-1-inicio">
+        <img src="Images/Inicio3.jpg" alt="" class="imagen-2-inicio">
+        <img src="Images/Inicio2.jpg" alt="" class="imagen-3-inicio">
+    </div>
+    
+    <!-----Ubicación----->
+    <div id="container-ubicacion">
+        <h1 id="titulo-ubi">Ubicación</h1>
+        <script>
+            // Obtener el elemento de texto
+            var textoElemento = document.getElementById('titulo-ubi');
+    
+            // Obtener el ancho del texto en píxeles
+            var anchoTexto = textoElemento.getBoundingClientRect().width;
+        
+            textoElemento.style.setProperty('--anchoTexto', anchoTexto + 'px');
+        
+        </script>
+        
+        <article class="ubicacion-text">
+            
+            <p>Vivero Yaxché está ubicado en <b>Paysandú, Uruguay</b>.
+                Nuestra dirección es <b>Solano García 1369</b>, cerca del Depósito de Salus. Consulta el mapa para obtener indicaciones precisas. 
+            </p>
+            <img src="Images/te-esperamos.png" alt="">
+        </article>
+
+        <div id="container-ubicacion-map"></div>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>   
+        <script src="js/map.js"></script>
+
+
+        
+
+    </div>
+
+    <!-----Contacto----->
+    <div id="titulo-contacto"><h1 >Contacto</h1></div>
+    
+    <div id="container-contacto">
+        <script>
+            // Obtener el elemento de texto
+            var textoElemento = document.getElementById('titulo-contacto');
+    
+            // Obtener el ancho del texto en píxeles
+            var anchoTexto = textoElemento.getBoundingClientRect().width;
+        
+            textoElemento.style.setProperty('--anchoTexto-contacto', anchoTexto + 'px');
+        
+        </script>
+         
+        <div class="video-contacto"><video width="" height="" autoplay muted loop>
+            <source src="Images/vid-contacto-mp4.mp4" type="video/mp4">
+            
+            Tu navegador no es compatible con este archivo
+        </video></div>
+        
+        <div class="contacto-contenido">
+           
+
+            <p>Si desea realizar alguna consulta, Vivero Yaxché le ofrece diferentes formas para contactarse con nosotros.
+                Estamos aquí para ayudarle y responder a todas sus preguntas sobre plantas, servicios y más.
+                
+            </p>
+
+            <br>
+            
+
+            <p>
+                Haz click en cualquiera de las siguientes redes sociales
+                para ponerte en contacto!!
+            </p>
+        
+
+        <div class="img-contacto">
+        <img src="Images/arrow.png" alt="" class="arrow-img">
+        <a href="https://www.facebook.com/sandukuarani64?locale=es_LA" target="_blank"><img src="Images/logo-fb.png" alt="" class="logo"></a>
+        <a href="https://api.whatsapp.com/send?phone=59898564500" target="_blank"><img src="Images/logo-wpp.png" alt="" class="logo"></a>
+        <a href="https://www.instagram.com/vivero_yaxche/" target="_blank"><img src="Images/logo-ig.png" alt="" class="logo"></a>
+        </div>
+        </div>
+    </div>
+
+    
+    <div id="titulo-galeria"><h1>Galería</h1></div>
+    <div class="container-galeria">
+        <a href="Images/Vivero1.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero1.jpg" alt=""></a>
+        <a href="Images/Vivero2.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero2.jpg" alt=""></a>
+        <a href="Images/Vivero3.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero3.jpg" alt=""></a>
+        <a href="Images/Vivero4.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero4.jpg" alt=""></a>
+        <a href="Images/Vivero5.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero5.jpg" alt=""></a>
+        <a href="Images/Vivero6.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero6.jpg" alt=""></a>
+        <a href="Images/Vivero7.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero7.jpg" alt=""></a>
+        <a href="Images/Vivero8.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero8.jpg" alt=""></a>
+        <a href="Images/Vivero9.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero9.jpg" alt=""></a>
+        <a href="Images/Vivero10.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero10.jpg" alt=""></a>
+        <a href="Images/Vivero11.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero11.jpg" alt=""></a>
+        <a href="Images/Vivero12.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero12.jpg" alt=""></a>
+        <a href="Images/Vivero13.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero13.jpg" alt=""></a>
+        <a href="Images/Vivero14.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero14.jpg" alt=""></a>
+        <a href="Images/Vivero15.jpg" data-lightbox="models" data-title="Pimientos"><img src="Images/Vivero15.jpg" alt=""></a>
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+    </div>
+
+
+    <div id="button-up">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
