@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=+, initial-scale=1.0">
-    
+   
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/de676a80bf.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="css/diseño-manual.css">
+    <link rel="stylesheet" href="css/diseño-manual2.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -18,13 +19,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lightbox.css">  
+    
+    
 
     
-    
-    <title>Vivero Yaxché</title>
+    <title>Consejos</title>
 
 </head>
 <body>
+
+<!--<i class="fa-solid fa-sun"></i>
+    <i class="fa-brands fa-canadian-maple-leaf"></i>
+    <i class="fa-solid fa-plant-wilt">
+    <i class="fa-solid fa-sun-plant-wilt"></i>
+</i>
+
+
+-->
 
    <!-----Header - Menu----->
     <header>
@@ -33,20 +44,26 @@
             <div class="logoI">
                 <h1>Vivero <b>Yaxché</b></h1>
             </div>
-            
+
             <div class="menu" id="show-menu">
                 <nav>
                     <ul>
-                        <li id="menu-volver" ><a href="index.html"><i class="fa-solid fa-backward" href="index.html"></i></a><a class = "" href="index.html">Volver</a></li>
-                        <li class="selected-li"><a href="#">Consejos de Jardinería</a></li>
-                        <li><a href="">Indice</li></a>
+                        <li><a class="desplaza" href="#primavera"></a>Primavera</li>
                     </ul>
-                </nav>    
+                     
+                </nav>
+                   
+            </div>
+            <div class="menu-manual">
+                <div id="_back">
+                    <a href="index.html"><i class="fa-solid fa-backward" href="index.html"></i></a>
+                </div>
+                <div id="_menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
-        <div id="icon-menu">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+
     </header>
 
     <!-----Portada----->
@@ -69,12 +86,119 @@
             <br><b>¡Comencemos!</b></p>
     </div>
 
+    <section id="estaciones-año">
+        <h1>Estaciones del Año y Plantación</h1>
+        <h2 id="primavera">Primavera</h2>
+
+        <article>
+            <div class="texto-article">
+            <h3>Tomates(Primavera y Verano)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Cherry, Perita, Marmande.</p>
+            <p><b>•Plantación:</b> Inicia las semillas en interiores unas 6-8 semanas antes de la última helada y transplántalas después de las últimas heladas.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Elige un suelo bien drenado y rico en materia orgánica. <br>
+                <b>•Riego:</b> Mantén un régimen de riego constante y evita mojar las hojas para prevenir enfermedades. <br>
+                <b>•Sombra:</b> Proporciona sombra parcial en climas cálidos para evitar el estrés por calor. <br>
+                <b>•Fertilización:</b> Aplica un fertilizante balanceado para promover el desarrollo del fruto. <br>
+                <b>•Poda:</b> Elimina los brotes laterales para dirigir la energía hacia la producción de frutas. <br>
+                </p>
+            </div>
+            <img src="Images/consejos/tomate.png" alt="">
+        </article>
+
+        <article>
+            <div class="texto-article">
+            <h3>Lechuga(Primavera y Otoño)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Mantecosa, Romana, Escarola.</p>
+            <p><b>•Plantación:</b> Puedes sembrar directamente en el suelo después de las últimas heladas.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Elige un suelo bien drenado y rico en materia orgánica. <br>
+                <b>•Riego:</b> Necesitan agua constante para evitar el amargor y la formación de semillas. <br>
+                <b>•Sombra:</b> Siembra en lugares con sombra parcial en primavera para evitar que se vuelva amarga. <br>
+                <b>•Fertilización:</b> Utiliza un fertilizante equilibrado y rico en nitrógeno (Ej: Estiércol de compost, Infusión de ortiga, Cáscaras de huevo trituradas). <br>
+                </p>
+            </div>
+            <img src="Images/consejos/lechuga.png" alt="">
+        </article>
+        
+        <article>
+            <div class="texto-article">
+            <h3>Zanahorias(Primavera y Otoño)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Criolla, Nantes, Morada.</p>
+            <p><b>•Plantación:</b> Siembra directamente en el suelo, preferiblemente en suelos arenosos y sueltos.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Requiere suelos arenosos y sueltos para un buen desarrollo. <br>
+                <b>•Riego:</b> Mantén el suelo uniformemente húmedo para evitar raíces fibrosas. <br>
+                <b>•Sombra:</b> No es necesario, pero puede tolerar sombra parcial.<br>
+                <b>•Fertilización:</b> Utiliza un fertilizante balanceado(Ej: Compost, Humus de lombriz, Guano de murciélago). <br>
+                <b>•Aclareo:</b> Aclara las plántulas para garantizar un buen desarrollo. <br>
+                </p>
+            </div>
+            <img id="img-zanahorias" src="Images/consejos/zanahoria.png" alt="">
+        </article>
+
+        <article>
+            <div class="texto-article">
+            <h3>Espinacas(Primavera y Otoño)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Catalana, Bloomsdale, Gigante de Invierno.</p>
+            <p><b>•Plantación:</b> Siembra directamente en el suelo antes de las últimas heladas.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Enmienda el suelo con compost para garantizar nutrientes adecuados.<br>
+                <b>•Riego:</b> Necesita agua constante, especialmente en climas cálidos.<br>
+                <b>•Sombra:</b> Proporciona sombra parcial en climas cálidos para prolongar la producción.<br>
+                <b>•Fertilización:</b> Utiliza un fertilizante equilibrado y rico en nitrógeno(Ej: Abono de gallinaza, Purín de ortigas, Compost). <br>
+                <b>•Cosecha:</b> Recoge las hojas exteriores regularmente para estimular el crecimiento.<br>
+                </p>
+            </div>
+            <img id="img-zanahorias" src="Images/consejos/espinaca.png" alt="">
+        </article>
+
+        <article>
+            <div class="texto-article">
+            <h3>Perejil(Primavera y Verano)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Rizado, Italiano, Hoja Larga.</p>
+            <p><b>•Plantación:</b> Siembra directamente en el suelo o transplanta después de las últimas heladas.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Prefiere suelos bien drenados y ricos en materia orgánica.<br>
+                <b>•Riego:</b> Mantén el suelo constantemente húmedo, evitando el encharcamiento.<br>
+                <b>•Sombra:</b> No es necesario, pero puede tolerar sombra parcial.<br>
+                <b>•Fertilización:</b> Utiliza un fertilizante balanceado(Ej: Humus de lombriz, Infusión de cáscara de plátano, Guano de aves).. <br>
+                <b>•Cosecha:</b> Recoge las hojas exteriores y estimula el crecimiento cosechando con regularidad. <br>
+                </p>
+            </div>
+            <img id="img-zanahorias" src="Images/consejos/perejil.png" alt="">
+        </article>
+
+        <article>
+            <div class="texto-article">
+            <h3>Rabanitos(Primavera y Otoño)</h3>
+            <p><b>•Variedades principales en Uruguay:</b> Redondo Rojo, Blanco, Cherry Belle.</p>
+            <p><b>•Plantación:</b> Siembra directamente en el suelo unas 2-4 semanas antes de la última helada.</p>
+            <p><b>Cuidados:</b></p>
+            <p id="p-cuidados">
+                <b>•Suelo:</b> Prefiere suelos bien drenados y sueltos. <br>
+                <b>•Riego:</b> Mantén el suelo húmedo para evitar raíces leñosas.<br>
+                <b>•Sombra:</b> No es necesario.<br>
+                <b>•Fertilización:</b> Utiliza un fertilizante balanceado(Ej: Compost, Humus de lombriz, Guano de murciélago). <br>
+                </p>
+            </div>
+            <img id="img-zanahorias" src="Images/consejos/rabanitos.png" alt="">
+        </article>
+
+
+    </section>
+
     <div id="button-up">
         <i class="fa-solid fa-chevron-up"></i>
     </div>
 
 </div>
 
-<script src="js/index.js"></script>
+<script src="js/consejos.js"></script>
 </body>
 </html>

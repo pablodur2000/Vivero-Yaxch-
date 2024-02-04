@@ -182,7 +182,6 @@ header{
 
     .icon-menu-select{
         filter: brightness(1.4);
-    
         transform: rotate(180deg) scale(1.2);
     }
 
@@ -219,7 +218,7 @@ header{
 
 .container-info-cover h1{
     margin-bottom: 10px;
-    font-size: 62px;
+    font-size: 60px;
     font-family: 'Fuzzy Bubbles', sans-serif;
     color: rgb(255, 255, 255);
     text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000; /* Simula el trazo exterior */
