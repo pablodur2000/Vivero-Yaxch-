@@ -75,16 +75,25 @@ header{
     height: 100%;
     display: flex;    
     list-style: none;
+    margin-top: 10px;
 }
 
 .menu nav ul li{
     height: 100%;
     display: flex;
-    margin: 0 10px;
+    margin: -5px auto;
     align-items: center;
     position: relative;
     transition: all 100ms;
     cursor: pointer;
+    width: 300px;
+}
+
+.menu-title{
+    color: rgb(36, 53, 4);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(194, 194, 194, 0.5);
 }
 /*
 .menu-selected:before{
@@ -98,8 +107,7 @@ header{
 }
 */
 .menu nav ul li a{
-    color: rgb(2, 63, 27);
-    font-size: 17px;
+    color: rgb(1, 92, 39);
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(194, 194, 194, 0.5);
     transition: color 300ms;
@@ -107,16 +115,21 @@ header{
 }
 
 .menu nav ul li a{
-    font-size: 20px;
-    color: rgb(145, 41, 41);
+    font-size: 15px;
     font-weight: bold;
     text-shadow: 3px 3px 3px rgba(139, 139, 139, 0.8);
     text-align: center;
     justify-content: center;
     align-items: center;  
-    
+    transition: all 300ms;   
 
 }
+
+.menu nav ul li a:hover{
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
 .menu-manual{
     display: flex;
     flex-direction: row;
@@ -244,7 +257,7 @@ header{
 
 .container-info-cover-manual h1{
     margin-bottom: 10px;
-    font-size: 62px;
+    font-size: 50px;
     font-family: 'Fuzzy Bubbles', sans-serif;
     color: rgb(255, 255, 255);
     text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000; /* Simula el trazo exterior */
@@ -260,6 +273,16 @@ header{
 
 }
 
+@media (max-width: 415px){
+    .container-info-cover-manual h1{
+        font-size: 32px;
+    }
+
+    .container-info-cover-manual p{
+        font-size: 18px;
+    }
+}
+
 
 /*-----------------------------------Contenido-----------------------------------*/
 /*------------------------------Inicio------------------------------*/
@@ -272,20 +295,34 @@ header{
     width: 1300px;
     margin: 0 auto;
     background-color: rgb(197, 247, 197);
+    margin-top: 15px;
 }
+
+
+
 
 .titulo-introduccion-manual{
     display: flex;
-    margin-left: 30px;
     inset: 0;
     max-width: 1300px;
     overflow: hidden;
     border-radius: 15px;
     padding-top: 15px;
+    position: relative;
         
+}
+.titulo-introduccion-manual:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    background: rgb(148, 231, 148);
+    top: 0;
+    left: 0;
 }
 
 .titulo-introduccion-manual h1{
+    margin-left: 25px;
     font-size: 50px;
     font-family: 'Fuzzy Bubbles', sans-serif;
     color: rgb(37, 37, 37);
@@ -295,7 +332,10 @@ header{
 .containter-introduccion{
     max-width: 100%;
     display: flex;
+    overflow: hidden;
 }
+
+
 
 .containter-introduccion p{
     font-size: 18px;
@@ -310,6 +350,8 @@ header{
     .all{
         width: 100%;
     }
+
+
 }
 
 
@@ -344,6 +386,8 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    flex-shrink: 1;
+    flex-basis: 100px;
 }
 
 #estaciones-año article h3{
@@ -372,11 +416,55 @@ header{
     line-height: 2.5 !important;
 }
 
+#estaciones-año #consejos-varios article{
+    flex-direction: column;
+    align-items: center;
+    flex:auto;
+    display: flex;
+    flex-shrink: 1;
+}
+
+#estaciones-año #consejos-varios h2{
+    margin-top: 20px;
+}
+
+#consejos-varios p{
+    width: 100% !important;
+}
+
+
+#estaciones-año article #img-tools{
+    width: 550px;
+    margin: auto;
+}
+
+#estaciones-año article #img-organizacion{
+    width: 550px;
+    margin: auto;
+}
+
+#estaciones-año article #img-plagas{
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    flex-basis: 200px;
+}
+
+#estaciones-año article #img-compost{
+    width: 500px;
+}
+
+
+
+
 @media (max-width: 1300px){
     #estaciones-año article{
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        
     }   
 
     #estaciones-año article img{
@@ -390,21 +478,168 @@ header{
     #img-zanahorias{
         margin: -40px auto !important;
     }
-
-    @media (max-width: 800px){
+}
+    @media (max-width: 600px){
         #estaciones-año article img{
-            width: 300px;
-            height: 300px;
+            max-width: 300px;
+            max-height: 300px;
+            flex-shrink: 1;
         }
 
         #p-cuidados{
             padding-left: 40px;
             line-height: 2 !important;
         }
-    }
+
+        #estaciones-año #consejos-varios article img{
+            width: 100%;
+        }
 
 }
 
+@media (max-width: 320px){
+    #estaciones-año article img{
+        width: 150px;
+        height: 150px;
+    }
+    #estaciones-año article{
+        overflow: hidden;
+    }
+
+    #estaciones-año h1{
+        font-size: 14px;
+    }
+
+    #estaciones-año h2{
+        font-size: 14px;
+    }
+
+
+
+}
+
+
+/*----------------------Footer----------------------*/
+
+footer{
+    background-color: rgba(148, 231, 148, 0.774);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+    z-index: 700;
+    flex-shrink: 1; 
+}
+
+.container-footer{
+    width: 100%;
+}
+
+.footer-redes{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    color: #413e3e;
+    flex-shrink: 1;
+}
+
+.footer-redes i{
+    max-width: 100%;
+}
+
+.footer-redes-linea1{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-redes-linea2{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-redes-linea1:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    background: rgb(125, 187, 125);
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.footer-redes-linea2:before{
+    content: '';
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    background: rgb(125, 187, 125);
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+
+.logoF{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+.logoF h1 b{
+    color: rgb(8, 88, 12);
+    
+}
+
+.footer-direccion{
+    margin-bottom: 7px;
+    white-space: nowrap;
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+
+.footer-direccion h1{
+    font-size: 21px;
+}
+
+.footer-copy p{
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+@media (max-width: 420px){
+    .logoF{
+        font-size: calc(10px + 2vw);
+        height: 100%;
+    }
+
+    .footer-copy p{
+        font-size: calc(8px + 0.5vw);
+    }
+
+    .footer-direccion h1{
+        font-size: calc(8px + 0.5vw);
+    }
+
+
+}
+
+@media (max-width: 250px){
+
+}
 
 
 /*----------------------Boton de ir arriba----------------------*/

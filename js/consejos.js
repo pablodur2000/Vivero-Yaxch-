@@ -7,7 +7,7 @@ function mostrarMenu(){
 }
 
 
-var enlacesMenu = document.querySelectorAll(".desplaza");
+var enlacesMenu = document.querySelectorAll(".desplazar");
 
 enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener("click", function () {
@@ -15,14 +15,14 @@ enlacesMenu.forEach(function (enlace) {
         var iconMenu = document.getElementById("_menu");
 
         menu.classList.remove('show-lateral');
-        iconMenu.classList.remove('menu_select');
+        iconMenu.classList.remove('_menu-select');
     });
 });
 //---------------------------------------------------------
 
 //-------------------scroll smooth-------------------
 $(document).ready(function(){
-    var ir_a = $(".desplaza");  //Declaramos variable ir_a y le decimos que su valor es la clase .desplazar
+    var ir_a = $(".desplazar");  //Declaramos variable ir_a y le decimos que su valor es la clase .desplazar
 
     ir_a.click(function(event){   //cuando se haga click a ir_a, se ejecutará la funcion con evento 
         event.preventDefault();    //previene configuraciones default
