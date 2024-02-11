@@ -1,0 +1,104 @@
+
+
+#container-all{
+    position: relative;
+    margin: 0 10px;
+}
+
+.bar{
+    width: 100%;
+    background-color: rgba(177, 233, 177, 0.548);
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px 0;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.bar-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(168, 243, 168);
+    border-radius: 10px;
+    padding: 4px 0;
+
+}
+
+.bar i{
+    margin-right: 30px;
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+.inactive{
+    display: flex;
+    width: 70%;
+}
+
+.active{
+    display: none;
+    width: 70%;
+}
+
+.inactive-click{
+    display: none;
+    width: 70%;
+}
+
+.active-click{
+    display: flex;
+    width: 70%;
+}
+
+.div-title{
+    width: 20%;
+}
+
+.title-bar{
+    font-size: 33px;
+    font-family: 'Fuzzy Bubbles', sans-serif;
+    text-wrap: nowrap;
+}
+
+#title-bar-licores{
+    font-size: 28px;    
+}
+
+.container-bar{
+    overflow: hidden;
+    align-self: center;
+    display: none;
+    max-height: 0;
+    transition: max-height 500ms ease;
+}
+
+.container-bar p{
+    font-size: 20px;
+    color: #413e3e;  
+    line-height: 1.5; 
+    text-align: center;
+    padding: 15px;
+    
+}
+
+.container-visible{
+    display: block;
+    animation: desplegar 800ms ease-out;
+}
+
+
+@keyframes desplegar {
+    from {
+        
+        opacity: 0; /* Configura la opacidad inicial del contenido durante la animación */
+        transform: translateY(-50px); /* Desplaza el contenido hacia arriba durante la animación */
+    }
+    to {
+        
+        opacity: 1; /* Configura la opacidad final del contenido durante la animación */
+        transform: translateY(0); /* Restaura la posición original del contenido */
+    }
+  }
