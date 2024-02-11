@@ -19,11 +19,12 @@
 .bar-flex{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgb(168, 243, 168);
     border-radius: 10px;
     padding: 4px 0;
+    position: relative;
 
 }
 
@@ -34,38 +35,38 @@
 }
 
 .inactive{
-    display: flex;
-    width: 70%;
+    display: block;
+    margin: 10px;
 }
 
 .active{
     display: none;
-    width: 70%;
+    margin: 10px;
 }
 
 .inactive-click{
     display: none;
-    width: 70%;
+    margin: 10px;
 }
 
 .active-click{
     display: flex;
-    width: 70%;
+    margin: 10px;
 }
 
 .div-title{
-    width: 20%;
+    width: 100%
 }
 
 .title-bar{
     font-size: 33px;
     font-family: 'Fuzzy Bubbles', sans-serif;
     text-wrap: nowrap;
+    position: absolute;
+    right: 2%;
+    top: calc(50% - 16px);
 }
 
-#title-bar-licores{
-    font-size: 28px;    
-}
 
 .container-bar{
     overflow: hidden;
