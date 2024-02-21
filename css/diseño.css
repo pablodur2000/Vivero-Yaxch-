@@ -251,7 +251,8 @@ header{
 .container-info-cover h1{
     margin-bottom: 10px;
     font-size: 60px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
+    font-style: normal;
     color: rgb(255, 255, 255);
     text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000; /* Simula el trazo exterior */
 }
@@ -323,7 +324,7 @@ header{
 @media (max-width: 480px){
     .all{
         width: 100%;
-        margin: 20px auto;
+        margin: auto;
     }
 }
 
@@ -333,11 +334,11 @@ header{
     text-align: center;
     display: flex;
     flex-direction: column; 
-
 }
 
 #article-inicio{
-    width: 100%;
+    margin: auto;
+    width: 90%;
     padding-bottom: 20px;  
     position: relative;
     padding-top: 15px;
@@ -358,18 +359,20 @@ header{
 #article-inicio h1{
     font-size: 60px;
     margin-bottom: 6px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
     color: rgb(37, 37, 37);
     text-shadow: -2px 0 0 #ffffff, 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 white; /* Simula el trazo exterior */
 
 }
 
 #article-inicio p{
-    font-size: 18px;
+    font-size: 19px;
     color: #413e3e; 
     line-height: 1.5;
     margin-bottom: 20px;
 }
+
+
 
 .container-imgs-inicio{
     display: flex;
@@ -436,15 +439,15 @@ header{
 #container-ubicacion{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     max-width: 1300px;
-    margin: 0 auto;
-    align-items: flex-start;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     padding-top: 15px;
-    
+    gap: 20px;
 }
 
 #container-ubicacion:before{
@@ -458,26 +461,23 @@ header{
     border-radius: 20px;
 }
 
-.ubicacion-text{
-    padding: 0 40px;
-}
 
 #container-ubicacion h1{
     margin: 0 calc(50% - var(--anchoTexto)/2);
     font-size: 60px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
     color: rgb(37, 37, 37);
     text-shadow: -2px 0 0 #ffffff, 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 white; /* Simula el trazo exterior */
 
 }
 
 .ubicacion-text{
-    max-width: 790px;
+    max-width: 90%;
 
 }
 
 .ubicacion-text p{
-    font-size: 22px;
+    font-size: 19px;
     color: #413e3e;  
     line-height: 1.5; 
     text-align: justify;
@@ -485,10 +485,9 @@ header{
 }
 
 #container-ubicacion-map{
-    height: 480px;
-    width: 480px;
+    height: 300px;
+    width: 90%;
     margin-top: 0;
-    margin-right: 30px;
     border: 5px solid rgba(36, 214, 36, 0.774);
     margin-bottom: 30px;
     z-index: 2;
@@ -499,6 +498,7 @@ header{
     max-width: 450px;
     margin: 0 calc(50% - 225px);
     margin-top: 70px;
+    display: none;
 }
 
 @media (max-width: 1300px) {
@@ -512,9 +512,8 @@ header{
         
     }
     #container-ubicacion-map {
-        width: 480px; /* Ajusta el ancho al 100% en pantallas más pequeñas */
-        margin-right: 0;
-        margin: 10px 20px;
+        width: 90%; /* Ajusta el ancho al 100% en pantallas más pequeñas */
+        
     }
     .ubicacion-text p{
         max-width: 100%;       
@@ -557,7 +556,7 @@ header{
 }
 #titulo-contacto h1{
     font-size: 60px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
     color: rgb(37, 37, 37);
     text-shadow: -2px 0 0 #ffffff, 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 white; /* Simula el trazo exterior */
 }
@@ -568,6 +567,7 @@ header{
     position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-bottom: 20px;
 }
 
 #titulo-contacto:before{
@@ -593,7 +593,7 @@ header{
 }
 
 #container-contacto p{
-    font-size: 22px;
+    font-size: 20px;
     color: #413e3e;  
     line-height: 1.5; 
     margin: 0;
@@ -726,7 +726,7 @@ header{
 #titulo-galeria h1{
     margin: 0 auto;
     font-size: 60px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
     color: rgb(37, 37, 37);
     text-shadow: -2px 0 0 #ffffff, 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 white; /* Simula el trazo exterior */  
 }
@@ -826,12 +826,12 @@ header{
 
 #titulo-testimonios h1{
     font-size: 60px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
+    font-family: "Playball", cursive;
     color: rgb(37, 37, 37);
     text-shadow: -2px 0 0 #ffffff, 2px 0 0 #ffffff, 0 -2px 0 #ffffff, 0 2px 0 white; /* Simula el trazo exterior */
 }
 
-.container-testimonios{
+#container-testimonios{
     height: 100%;
     padding: 50px 0;
     display: flex;
@@ -852,13 +852,14 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-    gap: 20px;
+    padding-bottom: 20px;
 }
 
 .container-testimonio img{
     width: 130px;
+    height: 130px;
     top: calc(0% - 65px);
     left: calc(50% - 65px);
     border-radius: 50%;
@@ -872,6 +873,14 @@ header{
     padding: 15px;
     margin-bottom: 30px;
     color: #413e3e; 
+}
+
+@media (max-width: 750px)  {
+    #container-testimonios{
+        gap: 100px;
+        flex-direction: column;
+        margin-top: 30px;
+    }
 }
 
 
@@ -910,6 +919,11 @@ footer{
     gap: 20px;
     color: #413e3e;
     flex-shrink: 1;
+}
+
+.footer-redes a{
+    list-style: none;
+    color: #413e3e;
 }
 
 .footer-redes i{
