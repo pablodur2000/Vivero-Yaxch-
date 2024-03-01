@@ -31,207 +31,6 @@ body{
 
 /*------------------------------Header - Menú------------------------------*/
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: rgba(148, 231, 148, 0.774);
-    box-shadow: 0 15px 20px -22px black;  
-    z-index: 10;
-}
-
-.header-content{
-    max-width: 1300px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.logoI{
-    height: 80px;
-    display: flex;
-    align-items: center;
-    margin: 0 0;
-}
-
-.logoI h1 b{
-    color: rgb(8, 88, 12);
-}
-
-
-.menu{
-    height: 80px;   
-}
-
-.menu nav{
-    height: 100%;
-}
-
-.menu nav ul{
-    height: 100%;
-    display: flex;    
-    list-style: none;
-    margin-top: 10px;
-}
-
-.menu nav ul li{
-    height: 100%;
-    display: flex;
-    margin: -5px auto;
-    align-items: center;
-    position: relative;
-    transition: all 100ms;
-    cursor: pointer;
-    width: 300px;
-}
-
-.menu-title{
-    color: rgb(36, 53, 4);
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(194, 194, 194, 0.5);
-}
-/*
-.menu-selected:before{
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: rgb(8, 88, 12);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-*/
-.menu nav ul li a{
-    color: rgb(1, 92, 39);
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(194, 194, 194, 0.5);
-    transition: color 300ms;
-
-}
-
-.menu nav ul li a{
-    font-size: 15px;
-    font-weight: bold;
-    text-shadow: 3px 3px 3px rgba(139, 139, 139, 0.8);
-    text-align: center;
-    justify-content: center;
-    align-items: center;  
-    transition: all 300ms;   
-
-}
-
-.menu nav ul li a:hover{
-    transform: scale(1.03);
-    filter: brightness(1.5);
-}
-
-.menu-manual{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: 120px
-}
-
-#_menu{
-    margin: auto 20px;
-    transition: all 500ms;
-}
-
-#_menu i{
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    background: rgb(227, 255, 227);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.712);
-    cursor: pointer;
-    transition: all 500ms;
-    filter: brightness(1);
-}
-
-#_menu:hover{
-    filter: brightness(1.4);
-}
-
-#_back{
-    cursor: pointer;
-}
-
-#_back i{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(227, 255, 227);
-    color: rgba(0, 0, 0, 0.712);
-    font-size: 25px;
-    border-radius: 50%;
-}
-
-#_back:hover{
-    filter: brightness(1.4);
-}
-
-
-
-
-    .menu{
-        width: 0px;
-        height: 100vh;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        background: rgba(148, 231, 148, 0.877);
-        overflow: hidden;
-        box-shadow: 10px 0 20px -25px black;
-        transform: translateX(-350px);
-        transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1);
-    }
-
-    .show-lateral{
-        width: 300px;
-        transform: translateX(0px);
-    }
-
-    .menu nav ul{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-
-    }
-
-    .menu nav ul li{
-        max-width: 200px;
-        height: 50px;
-        justify-content: center;
-    }
-
-    .menu nav ul li:hover{
-        background-color: rgba(145, 255, 0, 0);
-        border-top: 0;
-    }
-
-    ._menu-select{
-        filter: brightness(1.4);
-        transform: rotate(180deg) scale(1.2);
-    }
-
-    #_menu{
-        display: flex;
-    }
-    
-
-
 /*------------------------------Portada------------------------------*/
 
 .container-cover{
@@ -310,7 +109,7 @@ header{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(148, 231, 148);;
+    background: rgba(0, 0, 0, 0.459);
     bottom: 0;
     left: 0;
 }
@@ -337,7 +136,7 @@ header{
 /*----------------------Footer----------------------*/
 
 footer{
-    background-color: rgba(148, 231, 148, 0.774);
+    background-color: rgba(219, 168, 141, 0.582);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -368,6 +167,7 @@ footer{
 
 .footer-redes i{
     max-width: 100%;
+    color: rgba(0, 0, 0, 0.678);
 }
 
 .footer-redes-linea1{
@@ -387,7 +187,7 @@ footer{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(125, 187, 125);
+    background: rgba(83, 51, 34, 0.582);
     left: 0;
     bottom: 0;
     border-radius: 20px;
@@ -398,7 +198,7 @@ footer{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(125, 187, 125);
+    background: rgba(83, 51, 34, 0.582);
     right: 0;
     bottom: 0;
     border-radius: 20px;
