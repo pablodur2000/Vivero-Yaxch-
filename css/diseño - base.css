@@ -20,7 +20,7 @@ html{
 }
 
 body{
-    background-color: rgb(210, 250, 210);
+    background-color: rgba(238, 238, 191, 0.904);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -89,13 +89,13 @@ body{
 
 
 .all{
-    -webkit-box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
-    -moz-box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
-    box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
+    -webkit-box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
+    box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
     z-index: 0;
     width: 1300px;
     margin: 0 auto;
-    background-color: rgb(197, 247, 197);
+    background-color: rgb(236, 214, 189);
     margin-top: 15px;
     margin-bottom: 30px;
     border-radius: 20px;

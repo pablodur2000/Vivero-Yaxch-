@@ -20,7 +20,7 @@ html{
 }
 
 body{
-    background-color: rgb(210, 250, 210);
+    background-color: rgba(238, 238, 191, 0.904);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -30,14 +30,13 @@ body{
 }
 
 /*------------------------------Header - Menú------------------------------*/
-
 header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background: rgba(148, 231, 148, 0.774);
+    background-color: rgba(219, 168, 141, 0.884);
     box-shadow: 0 15px 20px -22px black;  
     z-index: 10;
 }
@@ -107,7 +106,7 @@ header{
 }
 */
 .menu nav ul li a{
-    color: rgb(1, 92, 39);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(194, 194, 194, 0.5);
     transition: color 300ms;
@@ -147,7 +146,7 @@ header{
     width: 50px;
     height: 50px;
     font-size: 22px;
-    background: rgb(227, 255, 227);
+    background: rgb(255, 255, 255);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -172,7 +171,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(227, 255, 227);
+    background-color: rgb(255, 255, 255);
     color: rgba(0, 0, 0, 0.712);
     font-size: 25px;
     border-radius: 50%;
@@ -191,7 +190,7 @@ header{
         position: fixed;
         top: 80px;
         left: 0;
-        background: rgba(148, 231, 148, 0.877);
+        background-color: rgba(219, 168, 141, 0.884);
         overflow: hidden;
         box-shadow: 10px 0 20px -25px black;
         transform: translateX(-350px);
@@ -230,6 +229,7 @@ header{
         display: flex;
     }
     
+
 
 
 /*------------------------------Portada------------------------------*/
@@ -290,13 +290,13 @@ header{
 
 
 .all{
-    -webkit-box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
-    -moz-box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
-    box-shadow: 0px 10px 30px -8px rgba(17,112,12,0.62);
-    z-index: -1;
+    -webkit-box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
+    box-shadow: 0px 8px 21px 3px rgba(0,0,0,0.56);
+    z-index: 0;
     width: 1300px;
     margin: 0 auto;
-    background-color: rgb(197, 247, 197);
+    background-color: rgb(236, 214, 189);
     margin-top: 15px;
     margin-bottom: 30px;
     border-radius: 20px;
@@ -310,7 +310,7 @@ header{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(148, 231, 148);;
+    background: rgba(0, 0, 0, 0.459);
     bottom: 0;
     left: 0;
 }
@@ -330,7 +330,7 @@ header{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(148, 231, 148);
+    background: rgba(0, 0, 0, 0.459);
     top: 0;
     left: 0;
 }
@@ -546,9 +546,8 @@ header{
 
 
 /*----------------------Footer----------------------*/
-
 footer{
-    background-color: rgba(148, 231, 148, 0.774);
+    background-color: rgba(219, 168, 141, 0.582);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -579,6 +578,7 @@ footer{
 
 .footer-redes i{
     max-width: 100%;
+    color: rgba(0, 0, 0, 0.678);
 }
 
 .footer-redes-linea1{
@@ -598,7 +598,7 @@ footer{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(125, 187, 125);
+    background: rgba(83, 51, 34, 0.582);
     left: 0;
     bottom: 0;
     border-radius: 20px;
@@ -609,7 +609,7 @@ footer{
     width: 100%;
     height: 6px;
     position: absolute;
-    background: rgb(125, 187, 125);
+    background: rgba(83, 51, 34, 0.582);
     right: 0;
     bottom: 0;
     border-radius: 20px;
@@ -663,9 +663,6 @@ footer{
 
 }
 
-@media (max-width: 250px){
-
-}
 
 
 /*----------------------Boton de ir arriba----------------------*/
