@@ -27,6 +27,14 @@ body{
     width: 100%;
     overflow-y: auto;
     
+
+    transition: filter 1.5s ease;
+}
+
+#div-efecto-blur-all{
+    filter: blur(0) ;
+
+    transition: all 1s ease;
 }
 
 /*------------------------------Header - Menú------------------------------*/
@@ -54,7 +62,7 @@ header{
     height: 80px;
     display: flex;
     align-items: center;
-    margin: 0 0;
+    margin: 0 0 0 10px;
 }
 
 .logoI h1 b{
@@ -234,55 +242,98 @@ header{
 
 /*------------------------------Portada------------------------------*/
 
-.container-cover{
+
+.cover-slider{
+    margin-top: 80px;
     width: 100%;
-    height: 600px;
-    margin-top: 80px; 
-    background-image: url(../Images/portada.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-.container-info-cover-manual{
-    max-width: 1100px;
-    height: 100%;
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.cover-slider-container{
+    position: relative;
+    width: 100%;
+    max-height: 700px;
     display: flex;
-    flex-direction: column;
 }
 
-.container-info-cover-manual h1{
-    margin-bottom: 10px;
-    font-size: 50px;
-    font-family: 'Fuzzy Bubbles', sans-serif;
-    color: rgb(255, 255, 255);
-    text-shadow: -4px 0 0 #000, 4px 0 0 #000, 0 -4px 0 #000, 0 4px 0 #000; /* Simula el trazo exterior */
+.cover-slider-before{
+    position: relative;
 }
 
-.container-info-cover-manual p{
-    color: rgb(255, 255, 255);  
-    font-weight: bold;
-    text-shadow: 3px 3px 1px rgb(0, 0, 0);;
-    font-size: 22px;
-    max-width: 900px;
-    margin: 0 auto;
+.cover-slider-before:after{
+    content: '';
+    margin: 10px 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    
+    background: linear-gradient(rgba(240, 240, 240, 0), rgb(238, 238, 191)); /* Degradado lineal transparente a opaco */
 
 }
 
-@media (max-width: 415px){
-    .container-info-cover-manual h1{
-        font-size: 32px;
+.cover-slider-content{
+    
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.slider-img{
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider-img img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%
+}
+
+
+
+@media (max-width: 1800px){
+    .slider-img img{
     }
 
-    .container-info-cover-manual p{
-        font-size: 18px;
+    .cover-slider-container{
+        max-height: 100vh !important;
     }
 }
 
+@media (max-width: 1300px){
+    .slider-img img{
+        max-width: 200%;
+    }
+}
+
+@media (max-width: 850px){
+    .slider-img img{
+        min-width: 200%;
+        min-height: 100vh;
+    }
+}
+
+
+@media (min-height: 1000px){
+    .cover-slider-container{
+        
+    }
+
+    .slider-img img{
+        min-width: auto;
+        min-height: 100vh;   
+    }
+
+}
 
 /*-----------------------------------Contenido-----------------------------------*/
 /*------------------------------Inicio------------------------------*/
@@ -698,4 +749,21 @@ footer{
         right: calc(50% - 30px);
         margin: 0 auto;
     }
+}
+
+
+
+.img-hortaliza{
+    transform: translateX(199px);
+    opacity: 0;
+
+    transition: all 2s ease;
+}
+
+.img-consejos{
+    transform: translateY(-30px);
+    filter: brightness(10%);
+    opacity: 0;
+
+    transition: transform 2s ease, filter 2s ease, opacity 1.3s ease;
 }

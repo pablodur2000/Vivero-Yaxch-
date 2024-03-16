@@ -2,23 +2,37 @@
 document.getElementById("icon-menu").addEventListener("click", mostrarMenu);
 
 function mostrarMenu(){
+    var blurEffect = document.getElementById("div-efecto-blur-all");
+    // Obtener los estilos computados del elemento
+    var estilosComputados = window.getComputedStyle(blurEffect);
+    // Verificar si el filtro está aplicado
+    var filtroAplicado = estilosComputados.getPropertyValue("filter");
+
     document.getElementById("show-menu").classList.toggle('show-lateral');
     document.getElementById("icon-menu").classList.toggle('icon-menu-select');
-}
 
+    if (filtroAplicado === 'blur(0px)') {
+        blurEffect.style.filter = 'blur(3px) brightness(0.8)';
+    } else {
+        blurEffect.style.filter = 'blur(0px)';
+    }
+}
 
 var enlacesMenu = document.querySelectorAll(".desplazar");
 
 enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener("click", function () {
+        var blurEffect = document.getElementById("div-efecto-blur-all");
         var menu = document.getElementById("show-menu");
         var iconMenu = document.getElementById("icon-menu");
 
         menu.classList.remove('show-lateral');
         iconMenu.classList.remove('icon-menu-select');
+        blurEffect.style.filter = 'blur(0px)';
     });
 });
 //---------------------------------------------------------
+
 
 //-------------------scroll smooth-------------------
 $(document).ready(function(){
